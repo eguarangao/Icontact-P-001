@@ -1,13 +1,16 @@
 ﻿
 
+using Business.DTOs;
 using Business.Entities;
 
 namespace DataAccess.Repositories
 {
-    public interface IHorarioRepository:IRepository<Horario>
+    public interface IHorarioRepository
     {
-        // Métodos adicionales específicos para la entidad Horario
-        Task<IEnumerable<Horario>> GetByPeliculaIdAsync(int peliculaId);
-        Task<IEnumerable<Horario>> GetBySalaIdAsync(int salaId);
+        Task<ServiceResponse> AddAsync(Horario horario);
+        Task<ServiceResponse> UpdateAsync(Horario horario);
+        Task<ServiceResponse> DeleteAsync(int id);
+        Task<List<Horario>> GetAsync();
+        Task<Horario> GetByIdAsync(int id);
     }
 }

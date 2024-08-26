@@ -14,15 +14,22 @@ namespace DataAccess.Data
         public DbSet<Sala> Salas { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Definir claves primarias
+            modelBuilder.Entity<Horario>().HasKey(h => h.IdHorario);
+            modelBuilder.Entity<Pelicula>().HasKey(p => p.IdPelicula);
+            modelBuilder.Entity<Sala>().HasKey(s => s.IdSala);
+
+            // Configurar relaciones
             modelBuilder.Entity<Horario>()
                 .HasOne(h => h.Sala)
-                .WithMany()
+                .WithMany(s => s.Horarios)
                 .HasForeignKey(h => h.IdSala);
 
             modelBuilder.Entity<Horario>()
                 .HasOne(h => h.Pelicula)
-                .WithMany()
+                .WithMany(p => p.Horarios)
                 .HasForeignKey(h => h.IdPelicula);
+
 
             base.OnModelCreating(modelBuilder);
         }

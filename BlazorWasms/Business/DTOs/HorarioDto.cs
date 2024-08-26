@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.DTOs
 {
-    internal class HorarioDto
+    public  class HorarioDto
     {
         public int IdHorario { get; set; }
         public string NombreSala { get; set; }

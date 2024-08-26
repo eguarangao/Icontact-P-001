@@ -9,8 +9,6 @@ C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\ne
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\Humanizer.dll
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\MediatR.dll
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
