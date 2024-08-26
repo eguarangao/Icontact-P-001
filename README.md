@@ -7,8 +7,7 @@
 
 **HorariosCRUD** es una aplicación web desarrollada en C# utilizando Blazor WebAssembly y SQL Server como base de datos. Esta aplicación permite la gestión de horarios a través de un sistema CRUD (Crear, Leer, Actualizar y Eliminar), proporcionando una interfaz de usuario intuitiva y un backend robusto.
 
-![Blazor WebAssembly](![Untitled_2](https://github.com/user-attachments/assets/6511dd7b-d11e-4077-b37a-a4787c95cc3f)
-)
+![Blazor WebAssembly](![Untitled_2](c)
 ![SQL Server](https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png)
 
 ## Características
