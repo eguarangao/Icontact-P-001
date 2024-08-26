@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCine", "BlazorCine\BlazorCine.csproj", "{F41E1D47-187D-4316-B545-8E9D860B6DED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F41E1D47-187D-4316-B545-8E9D860B6DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41E1D47-187D-4316-B545-8E9D860B6DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41E1D47-187D-4316-B545-8E9D860B6DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41E1D47-187D-4316-B545-8E9D860B6DED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0} = {29E44E83-ECBE-4D68-8618-80C7970C669D}
+		{F41E1D47-187D-4316-B545-8E9D860B6DED} = {29E44E83-ECBE-4D68-8618-80C7970C669D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93AF82A5-804A-497E-A9B7-3EA5AF2F5C80}

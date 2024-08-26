@@ -18,6 +18,9 @@ o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 builder.Services.AddScoped<IHorarioRepository, HorarioRepository>();
+builder.Services.AddScoped<IPeliculaRepository, PeliculaRepository>();
+builder.Services.AddScoped<ISalaRepository, SalaRepository>();
+
 
 var app = builder.Build();
 

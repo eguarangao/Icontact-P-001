@@ -7,13 +7,14 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HorarioController : Controller
+    public class HorarioController : ControllerBase
     {
         private readonly IHorarioRepository horario;
         public HorarioController(IHorarioRepository horario)
         {
             this.horario = horario;
         }
+       
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -33,8 +34,13 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Horario horarioDto)
+        public async Task<IActionResult> Add([FromBody] HorarioDto horarioDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var result = await horario.AddAsync(horarioDto);
             if (!result.Flag)
             {
@@ -43,9 +49,19 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Update( [FromBody] Horario horarioDto)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] HorarioDto horarioDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != horarioDto.IdHorario)
+            {
+                return BadRequest("ID del horario no coincide.");
+            }
+
             var result = await horario.UpdateAsync(horarioDto);
             if (!result.Flag)
             {
