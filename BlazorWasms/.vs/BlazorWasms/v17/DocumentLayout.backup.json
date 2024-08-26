@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\services\\horarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\services\\horarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +11,36 @@
       "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\webapi\\webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\services\\horarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\services\\horarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\services\\ihorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\services\\ihorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\blazorcine.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\blazorcine.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\webapi\\controllers\\horariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D91BAB6F-9D96-4DB4-8507-F6BC445EE8E0}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\horariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\blazorcine\\services\\ihorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F41E1D47-187D-4316-B545-8E9D860B6DED}|BlazorCine\\BlazorCine.csproj|solutionrelative:blazorcine\\services\\ihorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F2EDE72-20E9-4A5C-AB98-D3F7F21134DC}|DataAccess\\DataAccess.csproj|c:\\users\\user\\desktop\\git-destock\\icontact-p-001\\blazorwasms\\dataaccess\\repositories\\ihorariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,49 +58,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "WebAPI.http",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\WebAPI.http",
+              "RelativeDocumentMoniker": "WebAPI\\WebAPI.http",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\WebAPI.http",
+              "RelativeToolTip": "WebAPI\\WebAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-08-26T23:10:09.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T23:03:36.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-26T23:03:33.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorCine\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorCine\\Pages\\Home.razor",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T23:00:17.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Program.cs",
               "RelativeDocumentMoniker": "BlazorCine\\Program.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Program.cs",
               "RelativeToolTip": "BlazorCine\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T22:48:06.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BlazorCine\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Properties\\launchSettings.json",
               "RelativeToolTip": "BlazorCine\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-08-26T22:48:03.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "BlazorCine",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\BlazorCine.csproj",
               "RelativeDocumentMoniker": "BlazorCine\\BlazorCine.csproj",
               "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\BlazorCine.csproj",
               "RelativeToolTip": "BlazorCine\\BlazorCine.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-26T22:48:00.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T22:48:00.633Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "HorarioController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\WebAPI\\Controllers\\HorarioController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\HorarioController.cs",
@@ -92,12 +159,11 @@
               "RelativeToolTip": "WebAPI\\Controllers\\HorarioController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T22:44:36.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T22:44:36.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "HorarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\DataAccess\\Repositories\\HorarioRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\HorarioRepository.cs",
@@ -105,25 +171,24 @@
               "RelativeToolTip": "DataAccess\\Repositories\\HorarioRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T22:42:59.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T22:42:59.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "HorarioService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Services\\HorarioService.cs",
               "RelativeDocumentMoniker": "BlazorCine\\Services\\HorarioService.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Services\\HorarioService.cs",
               "RelativeToolTip": "BlazorCine\\Services\\HorarioService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAtwBIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAzwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T22:41:54.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "IHorarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\DataAccess\\Repositories\\IHorarioRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\IHorarioRepository.cs",
@@ -131,21 +196,19 @@
               "RelativeToolTip": "DataAccess\\Repositories\\IHorarioRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T22:39:13.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T22:39:13.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IHorario.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Services\\IHorario.cs",
               "RelativeDocumentMoniker": "BlazorCine\\Services\\IHorario.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\Services\\IHorario.cs",
               "RelativeToolTip": "BlazorCine\\Services\\IHorario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T22:38:55.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T22:38:55.184Z"
             }
           ]
         }

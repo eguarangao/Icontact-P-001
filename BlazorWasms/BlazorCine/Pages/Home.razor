@@ -1,7 +1,61 @@
 ﻿@page "/"
+@using BlazorCine.Services
+@using Business.DTOs
+@inject IHorario HorarioService
 
-<PageTitle>Home</PageTitle>
+<h3>Lista de Horarios</h3>
 
-<h1>Hello, world!</h1>
+@if (horarios != null)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sala</th>
+                <th>Película</th>
+                <th>Fecha y Hora</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var horario in horarios)
+            {
+                <tr>
+                    <td>@horario.IdHorario</td>
+                    <td>@horario.NombreSala</td>
+                    <td>@horario.NombrePelicula</td>
+                    <td>@horario.FechaYHora.ToString("g")</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" @onclick="() => EditHorario(horario.IdHorario)">Editar</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteHorario(horario.IdHorario)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Cargando...</p>
+}
 
-Welcome to your new app.
+@code {
+    private List<HorarioDto> horarios;
+
+    protected override async Task OnInitializedAsync()
+    {
+        horarios = await HorarioService.GetAsync();
+    }
+
+    private void EditHorario(int id)
+    {
+        // Redirigir a una página de edición, o manejar la lógica de edición aquí
+        Console.WriteLine($"Editar horario con ID: {id}");
+        // Puedes usar NavigationManager.NavigateTo($"/editar-horario/{id}");
+    }
+
+    private async Task DeleteHorario(int id)
+    {
+      
+    }
+}

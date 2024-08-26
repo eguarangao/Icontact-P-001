@@ -1044,9 +1044,6 @@ C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debu
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\mws7zh91jl-oyz0vx2fzb.gz
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\dwur0l97nu-ufprgdxaqp.gz
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5zwxbzkj70-gi280vjw6d.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\apwy45eng3-sw59pcbixd.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5u0kny1bse-ebr47kuuxj.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\c0wle2vkq1-c72kurnbvc.gz
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1061,3 +1058,6 @@ C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debu
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\refint\BlazorCine.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.pdb
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\ref\BlazorCine.dll
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\apwy45eng3-fgu18wdtbq.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5u0kny1bse-agvdm3aqx6.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\c0wle2vkq1-qb1p1rakts.gz
