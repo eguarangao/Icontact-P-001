@@ -33,6 +33,26 @@ namespace BlazorCine.Services
         public async Task<List<HorarioDto>> GetAsync()=>
             await httpClient.GetFromJsonAsync<List<HorarioDto>>("api/horario");
 
+        public async Task<ServiceResponse> UpdateAsync(updateDto horarioDto)
+        {
+            try
+            {
+                var response = await httpClient.PutAsJsonAsync($"api/horario/{horarioDto.IdHorario}", horarioDto);
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<ServiceResponse>();
+                }
+                else
+                {
+                    return new ServiceResponse(false, "Error al actualizar el horario");
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResponse(false, $"Excepción: {ex.Message}");
+            }
+        }
+
         Task<ServiceResponse> IHorario.DeleteAsync(int id)
         {
             throw new NotImplementedException();

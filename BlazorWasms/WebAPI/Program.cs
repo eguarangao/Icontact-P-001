@@ -21,6 +21,16 @@ builder.Services.AddScoped<IHorarioRepository, HorarioRepository>();
 builder.Services.AddScoped<IPeliculaRepository, PeliculaRepository>();
 builder.Services.AddScoped<ISalaRepository, SalaRepository>();
 
+// Configurar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("BlazorCine", policy =>
+    {
+        policy.WithOrigins("https://localhost:7071")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -29,16 +39,9 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-
-    app.UseCors(policy =>
-    {
-        policy.WithOrigins("https://localhost:7071")
-        .AllowAnyMethod()
-        .AllowAnyHeader()
-        .WithHeaders(HeaderNames.ContentType);
-    });
 }
 
+app.UseCors("BlazorCine");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

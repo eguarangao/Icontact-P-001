@@ -80,7 +80,7 @@ else
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" @onclick="SaveChanges">Guardar cambios</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="SaveChanges">Guardar cambios</button>
             </div>
         </div>
     </div>
@@ -110,6 +110,7 @@ else
     private List<SalaDto> salas = new();
     private List<PeliculaDto> peliculas = new();
     private HorarioDto selectedHorario = new HorarioDto();
+    private updateDto updateDto = new updateDto();
     private bool isEditMode;
     private int horarioIdToDelete;
 
@@ -130,6 +131,12 @@ else
     {
         isEditMode = true;
         selectedHorario = horario;
+        // Poblar updateDto con los datos del horario seleccionado
+        updateDto.IdHorario = horario.IdHorario;
+        updateDto.IdSala = horario.IdSala;
+        updateDto.IdPelicula = horario.IdPelicula;
+        updateDto.FechaYHora = horario.FechaYHora;
+
         await LoadDropdowns();
         await ShowModal("myModal");
     }
@@ -151,22 +158,27 @@ else
 
     private async Task SaveChanges()
     {
-        ServiceResponse result;
-        if (isEditMode)
+        try
         {
-            // Implementar la lógica de actualización aquí
+            ServiceResponse result;
+            if (isEditMode)
+            {
+                result = await HorarioService.UpdateAsync(updateDto);
+                horarios = await HorarioService.GetAsync();
+            }
+            else
+            {
+                selectedHorario.NombreSala = "00SC";
+                selectedHorario.NombrePelicula = "00SC";
+                selectedHorario.IdHorario = 1;
+                result = await HorarioService.AddAsync(selectedHorario);
+                horarios = await HorarioService.GetAsync();
+            }
+          
         }
-        else
-        {
-            selectedHorario.NombreSala = "00SC";
-            selectedHorario.NombrePelicula = "00SC";
-            selectedHorario.IdHorario = 1;
-            result = await HorarioService.AddAsync(selectedHorario);
-        }
+        catch (Exception ex) { Console.WriteLine($"Error: {ex.Message}"); }
 
-        horarios = await HorarioService.GetAsync();
-        await CloseModal("myModal");
-    }
+}
 
     private void OpenConfirmDeleteModal(int id)
     {

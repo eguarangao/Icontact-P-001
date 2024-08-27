@@ -21,7 +21,6 @@ namespace DataAccess.Repositories
                 IdSala = horarioDto.IdSala,
                 IdPelicula = horarioDto.IdPelicula,
                 FechaYHora = horarioDto.FechaYHora,
-                // Mapear otros campos si es necesario
             };
 
             await _context.Horarios.AddAsync(horario);
@@ -76,7 +75,7 @@ namespace DataAccess.Repositories
                  .FirstOrDefaultAsync(h => h.IdHorario == id);
         }
 
-        public async Task<ServiceResponse> UpdateAsync(HorarioDto horarioDto)
+        public async Task<ServiceResponse> UpdateAsync(updateDto horarioDto)
         {
             var horario = await _context.Horarios.FindAsync(horarioDto.IdHorario);
             if (horario == null)

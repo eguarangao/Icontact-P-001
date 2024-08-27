@@ -56,7 +56,7 @@
       },
       {
         "Name": "horarioDto",
-        "Type": "Business.DTOs.HorarioDto",
+        "Type": "Business.DTOs.updateDto",
         "IsRequired": true
       }
     ],

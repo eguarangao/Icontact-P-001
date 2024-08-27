@@ -48,6 +48,7 @@ namespace WebAPI.Controllers
             }
 
             var result = await horario.AddAsync(horarioDto);
+           
             if (!result.Flag)
             {
                 return StatusCode(500, result.Message);
@@ -57,23 +58,31 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] HorarioDto horarioDto)
+        public async Task<IActionResult> Update(int id, [FromBody] updateDto horarioDto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             if (id != horarioDto.IdHorario)
             {
-                return BadRequest("ID del horario no coincide.");
+                return BadRequest("El ID del horario no coincide con el ID del cuerpo de la solicitud.");
+            }
+
+            if (horarioDto == null)
+            {
+                return BadRequest("El horario no puede ser nulo.");
+            }
+
+            // Valida la fecha y hora
+            if (horarioDto.FechaYHora < DateTime.UtcNow)
+            {
+                return BadRequest("La fecha y hora no pueden ser en el pasado.");
             }
 
             var result = await horario.UpdateAsync(horarioDto);
+
             if (!result.Flag)
             {
-                return BadRequest(result.Message);
+                return StatusCode(500, result.Message);
             }
+
             return Ok(result);
         }
 
