@@ -29,6 +29,50 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\aladin.jpg",
+      "PackagePath": "staticwebassets\\images\\aladin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\alien.webp",
+      "PackagePath": "staticwebassets\\images\\alien.webp"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\borderlands.jpg",
+      "PackagePath": "staticwebassets\\images\\borderlands.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\deapol.jpg",
+      "PackagePath": "staticwebassets\\images\\deapol.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\flyme.jpg",
+      "PackagePath": "staticwebassets\\images\\flyme.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\furiosa.jpg",
+      "PackagePath": "staticwebassets\\images\\furiosa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\garfiels.jpg",
+      "PackagePath": "staticwebassets\\images\\garfiels.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\huntsman.jpg",
+      "PackagePath": "staticwebassets\\images\\huntsman.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\kids.webp",
+      "PackagePath": "staticwebassets\\images\\kids.webp"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\thor.jpg",
+      "PackagePath": "staticwebassets\\images\\thor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\images\\venon.jpg",
+      "PackagePath": "staticwebassets\\images\\venon.jpg"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\GIT-Destock\\Icontact-P-001\\BlazorWasms\\BlazorCine\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

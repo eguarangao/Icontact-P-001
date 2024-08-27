@@ -53,9 +53,24 @@ namespace BlazorCine.Services
             }
         }
 
-        Task<ServiceResponse> IHorario.DeleteAsync(int id)
+        public async Task<ServiceResponse> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = await httpClient.DeleteAsync($"api/horario/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<ServiceResponse>();
+                }
+                else
+                {
+                    return new ServiceResponse(false, "Error al eliminar el horario.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResponse(false, $"Excepción: {ex.Message}");
+            }
         }
     }
 }

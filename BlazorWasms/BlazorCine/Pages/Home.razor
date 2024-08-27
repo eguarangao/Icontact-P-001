@@ -8,6 +8,8 @@
 
 <h3>Gestión de Horarios</h3>
 
+
+
 <!-- Botón para crear un nuevo horario -->
 <button class="btn btn-success mb-3" @onclick="OpenCreateModal">Nuevo Horario</button>
 
@@ -99,13 +101,37 @@ else
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-danger" @onclick="ConfirmDelete">Eliminar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick="ConfirmDelete">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mensajes -->
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center text-white bg-success border-0" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    @successMessage
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="toast align-items-center text-white bg-danger border-0" id="errorToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    @errorMessage
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
 </div>
 
 @code {
+    private string successMessage;
+    private string errorMessage;
     private List<HorarioDto> horarios;
     private List<SalaDto> salas = new();
     private List<PeliculaDto> peliculas = new();
@@ -176,6 +202,16 @@ else
                 // Llama al servicio de actualización
                 result = await HorarioService.UpdateAsync(updateDto);
                 horarios = await HorarioService.GetAsync();
+                if (result.Flag)
+                {
+                    successMessage = "Horario actualizado exitosamente.";
+                    await ShowToast("successToast");
+                }
+                else
+                {
+                    errorMessage = "Error al actualizar el horario.";
+                    await ShowToast("errorToast");
+                }
             }
             else
             {
@@ -183,13 +219,30 @@ else
                 selectedHorario.NombrePelicula = "00SC";
                 selectedHorario.IdHorario = 1;
                 result = await HorarioService.AddAsync(selectedHorario);
-                horarios = await HorarioService.GetAsync();
+                if (result.Flag)
+                {
+                    successMessage = "Horario creado exitosamente.";
+                    await ShowToast("successToast");
+                }
+                else
+                {
+                    errorMessage = "Error al crear el horario.";
+                    await ShowToast("errorToast");
+                }
             }
           
         }
-        catch (Exception ex) { Console.WriteLine($"Error: {ex.Message}"); }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+            await ShowToast("errorToast");;
+        }
 
 }
+    private async Task ShowToast(string toastId)
+    {
+        await JS.InvokeVoidAsync("eval", $"new bootstrap.Toast(document.getElementById('{toastId}')).show();");
+    }
 
     private void OpenConfirmDeleteModal(int id)
     {
@@ -199,8 +252,18 @@ else
 
     private async Task ConfirmDelete()
     {
-        await HorarioService.DeleteAsync(horarioIdToDelete);
-        horarios = await HorarioService.GetAsync();
+        var result = await HorarioService.DeleteAsync(horarioIdToDelete);
+        if (result.Flag)
+        {
+            successMessage = "Horario eliminado exitosamente.";
+            await ShowToast("successToast");
+            horarios = await HorarioService.GetAsync(); // Actualizar la lista de horarios
+        }
+        else
+        {
+            errorMessage = result.Message;
+            await ShowToast("errorToast");
+        }
         await CloseModal("confirmDeleteModal");
     }
 }

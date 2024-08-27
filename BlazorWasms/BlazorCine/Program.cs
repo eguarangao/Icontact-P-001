@@ -12,6 +12,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped<IHorario, HorarioService>();
 builder.Services.AddScoped<ISalaService, SalaService>();
 builder.Services.AddScoped<IPeliculaService, PeliculaService>();
+builder.Services.AddScoped<PeliculaService>();
 builder.Services.AddScoped<ToastService>();
 
 

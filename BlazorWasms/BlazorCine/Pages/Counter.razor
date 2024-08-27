@@ -1,18 +1,39 @@
 ﻿@page "/counter"
+@using BlazorCine.Services
+@inject PeliculaService PeliculaService
 
-<PageTitle>Counter</PageTitle>
+<h3>Cartelera de Películas</h3>
 
-<h1>Counter</h1>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+@if (peliculas != null && peliculas.Any())
+{
+    <div class="row">
+        @foreach (var pelicula in peliculas)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@pelicula.ImagenUrl" class="card-img-top" alt="@pelicula.Titulo" />
+                    <div class="card-body">
+                        <h5 class="card-title">@pelicula.Titulo</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@pelicula.Clasificacion</h6>
+                        <p class="card-text">@pelicula.Descripcion</p>
+                        <p class="card-text"><small class="text-muted">Estreno: @pelicula.FechaEstreno.ToString("dd MMM yyyy")</small></p>
+                        <a href="#" class="btn btn-primary">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>Cargando cartelera...</p>
+}
 
 @code {
-    private int currentCount = 0;
+    private List<Pelicula> peliculas;
 
-    private void IncrementCount()
+    protected override async Task OnInitializedAsync()
     {
-        currentCount++;
+        peliculas = await PeliculaService.ObtenerPeliculasAsync();
     }
 }

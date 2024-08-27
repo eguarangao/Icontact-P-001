@@ -77,20 +77,31 @@ namespace DataAccess.Repositories
 
         public async Task<ServiceResponse> UpdateAsync(updateDto horarioDto)
         {
-            var horario = await _context.Horarios.FindAsync(horarioDto.IdHorario);
-            if (horario == null)
+            try
             {
-                return new ServiceResponse(false, "Horario no encontrado.");
+                var horario = await _context.Horarios.FindAsync(horarioDto.IdHorario);
+                if (horario == null)
+                {
+                    return new ServiceResponse(false, "Horario no encontrado.");
+                }
+
+                // Actualizar los campos necesarios
+                horario.IdSala = horarioDto.IdSala;
+                horario.IdPelicula = horarioDto.IdPelicula;
+                horario.FechaYHora = horarioDto.FechaYHora;
+
+                _context.Horarios.Update(horario);
+
+                // Guardar los cambios con un mayor tiempo de espera
+                await _context.SaveChangesAsync();
+
+                return new ServiceResponse(true, "Horario actualizado exitosamente.");
             }
-
-            horario.IdSala = horarioDto.IdSala;
-            horario.IdPelicula = horarioDto.IdPelicula;
-            horario.FechaYHora = horarioDto.FechaYHora;
-            // Mapear otros campos si es necesario
-
-            _context.Horarios.Update(horario);
-            await _context.SaveChangesAsync();
-            return new ServiceResponse(true, "Horario actualizado exitosamente.");
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                return new ServiceResponse(false, $"Error al actualizar el horario: {ex.Message}");
+            }
         }
     }
 }
