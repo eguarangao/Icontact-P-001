@@ -6,5 +6,6 @@ namespace BlazorCine.Services
     {
         Task<ServiceResponse> AddAsync(HorarioDto horarioDto);
         Task<List<HorarioDto>> GetAsync();
+        Task<ServiceResponse> DeleteAsync(int id);
     }
 }

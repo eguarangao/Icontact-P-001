@@ -10,7 +10,11 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 //Declarar Servicios 
 builder.Services.AddScoped<IHorario, HorarioService>();
+builder.Services.AddScoped<ISalaService, SalaService>();
+builder.Services.AddScoped<IPeliculaService, PeliculaService>();
 builder.Services.AddScoped<ToastService>();
+
+
 
 //comunicacion con la APPI
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7118") });

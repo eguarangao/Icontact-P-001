@@ -1,9 +1,8 @@
 ﻿using Business.DTOs;
 
-
-namespace DataAccess.Repositories
+namespace BlazorCine.Services
 {
-    public interface ISalaRepository
+    public interface ISalaService
     {
         Task<List<SalaDto>> GetSalasAsync();
     }

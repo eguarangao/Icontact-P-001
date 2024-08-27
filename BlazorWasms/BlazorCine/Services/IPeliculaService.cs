@@ -1,8 +1,8 @@
 ﻿using Business.DTOs;
 
-namespace DataAccess.Repositories
+namespace BlazorCine.Services
 {
-    public interface IPeliculaRepository
+    public interface IPeliculaService
     {
         Task<List<PeliculaDto>> GetPeliculasAsync();
     }

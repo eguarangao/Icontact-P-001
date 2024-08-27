@@ -11,5 +11,6 @@ namespace Business.Entities
 
         public Sala Sala { get; set; }
         public Pelicula Pelicula { get; set; }
+
     }
 }

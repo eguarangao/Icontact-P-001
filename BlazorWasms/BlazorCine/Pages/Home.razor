@@ -2,15 +2,21 @@
 @using BlazorCine.Services
 @using Business.DTOs
 @inject IHorario HorarioService
+@inject ISalaService SalaService
+@inject IPeliculaService PeliculaService
+@inject IJSRuntime JS
 
-<h3>Lista de Horarios</h3>
+<h3>Gestión de Horarios</h3>
+
+<!-- Botón para crear un nuevo horario -->
+<button class="btn btn-success mb-3" @onclick="OpenCreateModal">Nuevo Horario</button>
 
 @if (horarios != null)
 {
-    <table class="table table-striped">
+    <table class="table table-hover table-bordered table-striped">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Id Horario</th>
                 <th>Sala</th>
                 <th>Película</th>
                 <th>Fecha y Hora</th>
@@ -24,10 +30,10 @@
                     <td>@horario.IdHorario</td>
                     <td>@horario.NombreSala</td>
                     <td>@horario.NombrePelicula</td>
-                    <td>@horario.FechaYHora.ToString("g")</td>
+                    <td>@horario.FechaYHora.ToString("f")</td>
                     <td>
-                        <button class="btn btn-primary btn-sm" @onclick="() => EditHorario(horario.IdHorario)">Editar</button>
-                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteHorario(horario.IdHorario)">Eliminar</button>
+                        <button class="btn btn-primary btn-sm" @onclick="() => OpenEditModal(horario)">Editar</button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => OpenConfirmDeleteModal(horario.IdHorario)">Eliminar</button>
                     </td>
                 </tr>
             }
@@ -38,24 +44,140 @@ else
 {
     <p>Cargando...</p>
 }
+<!-- Modal para Crear/Editar Horario -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="horarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="horarioModalLabel">@(isEditMode ? "Editar Horario" : "Nuevo Horario")</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="salaSelect" class="form-label">Sala</label>
+                    <select class="form-select" id="salaSelect" @bind="selectedHorario.IdSala">
+                        <option value="">Seleccione una sala</option>
+                        @foreach (var sala in salas)
+                        {
+                            <option value="@sala.IdSala">@sala.NombreSala</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="peliculaSelect" class="form-label">Película</label>
+                    <select class="form-select" id="peliculaSelect" @bind="selectedHorario.IdPelicula">
+                        <option value="">Seleccione una película</option>
+                        @foreach (var pelicula in peliculas)
+                        {
+                            <option value="@pelicula.IdPelicula">@pelicula.NombrePelicula</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="fechaHoraInput" class="form-label">Fecha y Hora</label>
+                    <input type="datetime-local" class="form-control" id="fechaHoraInput" @bind="selectedHorario.FechaYHora">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" @onclick="SaveChanges">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmación de Eliminación -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas eliminar este horario?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" @onclick="ConfirmDelete">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
     private List<HorarioDto> horarios;
+    private List<SalaDto> salas = new();
+    private List<PeliculaDto> peliculas = new();
+    private HorarioDto selectedHorario = new HorarioDto();
+    private bool isEditMode;
+    private int horarioIdToDelete;
 
     protected override async Task OnInitializedAsync()
     {
         horarios = await HorarioService.GetAsync();
     }
 
-    private void EditHorario(int id)
+    private async Task OpenCreateModal()
     {
-        // Redirigir a una página de edición, o manejar la lógica de edición aquí
-        Console.WriteLine($"Editar horario con ID: {id}");
-        // Puedes usar NavigationManager.NavigateTo($"/editar-horario/{id}");
+        isEditMode = false;
+        selectedHorario = new HorarioDto();
+        await LoadDropdowns();
+        await ShowModal("myModal");
     }
 
-    private async Task DeleteHorario(int id)
+    private async Task OpenEditModal(HorarioDto horario)
     {
-      
+        isEditMode = true;
+        selectedHorario = horario;
+        await LoadDropdowns();
+        await ShowModal("myModal");
+    }
+    private async Task LoadDropdowns()
+    {
+        salas = await SalaService.GetSalasAsync();
+        peliculas = await PeliculaService.GetPeliculasAsync();
+    }
+
+    private async Task ShowModal(string modalId)
+    {
+        await JS.InvokeVoidAsync("eval", $"new bootstrap.Modal(document.getElementById('{modalId}')).show();");
+    }
+
+    private async Task CloseModal(string modalId)
+    {
+        await JS.InvokeVoidAsync("eval", $"new bootstrap.Modal(document.getElementById('{modalId}')).hide();");
+    }
+
+    private async Task SaveChanges()
+    {
+        ServiceResponse result;
+        if (isEditMode)
+        {
+            // Implementar la lógica de actualización aquí
+        }
+        else
+        {
+            selectedHorario.NombreSala = "00SC";
+            selectedHorario.NombrePelicula = "00SC";
+            selectedHorario.IdHorario = 1;
+            result = await HorarioService.AddAsync(selectedHorario);
+        }
+
+        horarios = await HorarioService.GetAsync();
+        await CloseModal("myModal");
+    }
+
+    private void OpenConfirmDeleteModal(int id)
+    {
+        horarioIdToDelete = id;
+        ShowModal("confirmDeleteModal");
+    }
+
+    private async Task ConfirmDelete()
+    {
+        await HorarioService.DeleteAsync(horarioIdToDelete);
+        horarios = await HorarioService.GetAsync();
+        await CloseModal("confirmDeleteModal");
     }
 }

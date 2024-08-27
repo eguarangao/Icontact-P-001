@@ -36,16 +36,23 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] HorarioDto horarioDto)
         {
-            if (!ModelState.IsValid)
+            if (horarioDto == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("El horario no puede ser nulo.");
+            }
+
+            // Validar la fecha y otros datos
+            if (horarioDto.FechaYHora < DateTime.UtcNow)
+            {
+                return BadRequest("La fecha y hora no pueden ser en el pasado.");
             }
 
             var result = await horario.AddAsync(horarioDto);
             if (!result.Flag)
             {
-                return BadRequest(result.Message);
+                return StatusCode(500, result.Message);
             }
+
             return Ok(result);
         }
 
