@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorCine",
   "resources": {
-    "hash": "sha256-JodboxWDyjJk+jqFVSDDLJ9SH4fRrANdPWzdXgqNW/w=",
+    "hash": "sha256-MbtFoNEnXz70NWXnelexbFDBgRkZccXxLuBjC3sUmVo=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -212,12 +212,12 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "Business.wasm": "sha256-xox6ptnhfiiQxNw/KHCN5aBYcbUvpHPCCktLUW74fpo=",
-      "BlazorCine.wasm": "sha256-/agh+F6uLCEMLmBABNX1pEELGgAmn20jmNwF9n0Vhqc="
+      "Business.wasm": "sha256-MiX2eJ2rg9XrSJwxIxhE27MXkA4DFuWj8hLBEHrz+RI=",
+      "BlazorCine.wasm": "sha256-wz3LBKvjgOJ3kep8XinuTfIacPgmBFgswjZu5V0rnAA="
     },
     "pdb": {
-      "Business.pdb": "sha256-3xJ/a3Njem/EukAU4p1AUqnKSZRe2FNR4jepOSrYqR4=",
-      "BlazorCine.pdb": "sha256-qWwSdxKvTiOv8XuUw0MG3psNkXnhnNXd//BcB5wibeg="
+      "Business.pdb": "sha256-FGzWbvHf+QWDSjX8BVHo3XXaKSnDZ/rLkkU9zZGW1o4=",
+      "BlazorCine.pdb": "sha256-fIk2XDqEGk02BxG6IS5px3kmKHe/qcvgfP6+rIxfvtE="
     }
   },
   "cacheBootResources": true,

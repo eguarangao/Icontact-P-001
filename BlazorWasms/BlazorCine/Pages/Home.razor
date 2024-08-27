@@ -130,12 +130,15 @@ else
     private async Task OpenEditModal(HorarioDto horario)
     {
         isEditMode = true;
-        selectedHorario = horario;
-        // Poblar updateDto con los datos del horario seleccionado
-        updateDto.IdHorario = horario.IdHorario;
-        updateDto.IdSala = horario.IdSala;
-        updateDto.IdPelicula = horario.IdPelicula;
-        updateDto.FechaYHora = horario.FechaYHora;
+        selectedHorario = new HorarioDto
+            {
+                IdHorario = horario.IdHorario,
+                IdSala = horario.IdSala,
+                IdPelicula = horario.IdPelicula,
+                FechaYHora = horario.FechaYHora,
+                NombreSala = horario.NombreSala,
+                NombrePelicula = horario.NombrePelicula
+            };
 
         await LoadDropdowns();
         await ShowModal("myModal");
@@ -163,6 +166,14 @@ else
             ServiceResponse result;
             if (isEditMode)
             {
+               
+                // Actualiza los valores de updateDto
+                updateDto.IdHorario = selectedHorario.IdHorario;
+                updateDto.IdSala = selectedHorario.IdSala;
+                updateDto.IdPelicula = selectedHorario.IdPelicula;
+                updateDto.FechaYHora = selectedHorario.FechaYHora;
+
+                // Llama al servicio de actualización
                 result = await HorarioService.UpdateAsync(updateDto);
                 horarios = await HorarioService.GetAsync();
             }
