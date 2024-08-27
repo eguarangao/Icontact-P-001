@@ -13,6 +13,33 @@
 <!-- Botón para crear un nuevo horario -->
 <button class="btn btn-success mb-3" @onclick="OpenCreateModal">Nuevo Horario</button>
 
+<div class="row mb-3">
+    <div class="col">
+        <label for="peliculaSelect" class="form-label">Película</label>
+        <select class="form-select" id="peliculaSelect" @bind="selectedPeliculaId">
+            <option value="">Todas</option>
+            @foreach (var pelicula in peliculas)
+            {
+                <option value="@pelicula.IdPelicula">@pelicula.NombrePelicula</option>
+            }
+        </select>
+    </div>
+    <div class="col">
+        <label for="salaSelect" class="form-label">Sala</label>
+        <select class="form-select" id="salaSelect" @bind="selectedSalaId">
+            <option value="">Todas</option>
+            @foreach (var sala in salas)
+            {
+                <option value="@sala.IdSala">@sala.NombreSala</option>
+            }
+        </select>
+    </div>
+    
+    <div class="col">
+        <button class="btn btn-primary mt-4" @onclick="Filtrar">Filtrar</button>
+    </div>
+</div>
+
 @if (horarios != null)
 {
     <table class="table table-hover table-bordered table-striped">
@@ -140,9 +167,16 @@ else
     private bool isEditMode;
     private int horarioIdToDelete;
 
+    // Filtros
+    private int? selectedPeliculaId;
+    private int? selectedSalaId;
+    private DateTime? startDate;
+    private DateTime? endDate;
+
     protected override async Task OnInitializedAsync()
     {
-        horarios = await HorarioService.GetAsync();
+        await LoadDropdowns();
+        await Filtrar();
     }
 
     private async Task OpenCreateModal()
@@ -151,6 +185,11 @@ else
         selectedHorario = new HorarioDto();
         await LoadDropdowns();
         await ShowModal("myModal");
+    }
+    private async Task Filtrar()
+    {
+        horarios = await HorarioService.GetFilteredAsync(selectedPeliculaId, selectedSalaId, startDate, endDate);
+        
     }
 
     private async Task OpenEditModal(HorarioDto horario)
@@ -219,6 +258,7 @@ else
                 selectedHorario.NombrePelicula = "00SC";
                 selectedHorario.IdHorario = 1;
                 result = await HorarioService.AddAsync(selectedHorario);
+                horarios = await HorarioService.GetAsync();
                 if (result.Flag)
                 {
                     successMessage = "Horario creado exitosamente.";

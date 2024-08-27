@@ -103,5 +103,46 @@ namespace DataAccess.Repositories
                 return new ServiceResponse(false, $"Error al actualizar el horario: {ex.Message}");
             }
         }
+
+        public async Task<List<HorarioDto>> GetFilteredAsync(int? peliculaId = null, int? salaId = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+            var query = _context.Horarios.AsQueryable();
+
+            if (peliculaId.HasValue)
+            {
+                query = query.Where(h => h.IdPelicula == peliculaId.Value);
+            }
+
+            if (salaId.HasValue)
+            {
+                query = query.Where(h => h.IdSala == salaId.Value);
+            }
+
+            if (startDate.HasValue)
+            {
+                query = query.Where(h => h.FechaYHora >= startDate.Value);
+            }
+
+            if (endDate.HasValue)
+            {
+                query = query.Where(h => h.FechaYHora <= endDate.Value);
+            }
+
+            return await query
+                .Include(h => h.Sala)
+                .Include(h => h.Pelicula)
+                .Select(h => new HorarioDto
+                {
+                    IdHorario = h.IdHorario,
+                    IdSala = h.IdSala,
+                    IdPelicula = h.IdPelicula,
+                    FechaYHora = h.FechaYHora,
+                    NombreSala = h.Sala.NombreSala,
+                    NombrePelicula = h.Pelicula.NombrePelicula
+                })
+                .ToListAsync();
+        }
+
+      
     }
 }

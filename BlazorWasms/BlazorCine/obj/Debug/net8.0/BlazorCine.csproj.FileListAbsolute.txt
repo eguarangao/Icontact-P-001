@@ -1,3 +1,10 @@
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.AssemblyInfo.cs
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.sourcelink.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debug\net8.0\wwwroot\_framework\BlazorCine.pdb
@@ -628,13 +635,6 @@ C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debu
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debug\net8.0\emcc-props.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debug\net8.0\Business.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\bin\Debug\net8.0\Business.pdb
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.csproj.AssemblyReference.cache
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.AssemblyInfoInputs.cache
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.AssemblyInfo.cs
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.csproj.CoreCompileInputs.cache
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.sourcelink.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
@@ -1042,8 +1042,8 @@ C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debu
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\0t9zyzdgeh-tptq2av103.gz
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\owvyhrb1m6-lfu7j35m59.gz
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\mws7zh91jl-oyz0vx2fzb.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\dwur0l97nu-5nor7n2yso.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5zwxbzkj70-wy8l2j6xro.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\dwur0l97nu-pdcpyv94b4.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5zwxbzkj70-6h88v90yz6.gz
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1058,6 +1058,6 @@ C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debu
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\refint\BlazorCine.dll
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\BlazorCine.pdb
 C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\ref\BlazorCine.dll
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\apwy45eng3-4fvidisemm.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5u0kny1bse-6wi6m38g3s.gz
-C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\c0wle2vkq1-wfxmeabnrh.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\apwy45eng3-0uukbi2z5g.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\5u0kny1bse-r770ov2z88.gz
+C:\Users\USER\Desktop\GIT-Destock\Icontact-P-001\BlazorWasms\BlazorCine\obj\Debug\net8.0\compressed\c0wle2vkq1-vsnphyrov6.gz

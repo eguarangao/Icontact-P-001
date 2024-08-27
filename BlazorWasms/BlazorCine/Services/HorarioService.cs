@@ -72,5 +72,25 @@ namespace BlazorCine.Services
                 return new ServiceResponse(false, $"Excepción: {ex.Message}");
             }
         }
+        public async Task<List<HorarioDto>> GetFilteredAsync(int? peliculaId = null, int? salaId = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+            var query = "api/horario/filter?";
+
+            if (peliculaId.HasValue)
+                query += $"peliculaId={peliculaId.Value}&";
+
+            if (salaId.HasValue)
+                query += $"salaId={salaId.Value}&";
+
+            if (startDate.HasValue)
+                query += $"startDate={startDate.Value.ToString("o")}&"; // "o" es el formato de fecha y hora UTC
+
+            if (endDate.HasValue)
+                query += $"endDate={endDate.Value.ToString("o")}&";
+
+            return await httpClient.GetFromJsonAsync<List<HorarioDto>>(query.TrimEnd('&'));
+        }
+
+
     }
 }

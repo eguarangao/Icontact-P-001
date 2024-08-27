@@ -22,6 +22,14 @@ namespace WebAPI.Controllers
             return Ok(data);
         }
 
+        [HttpGet("filter")]
+        public async Task<IActionResult> GetFiltered(int? peliculaId = null, int? salaId = null, DateTime? startDate = null, DateTime? endDate = null)
+        {
+            var data = await horario.GetFilteredAsync(peliculaId, salaId, startDate, endDate);
+            return Ok(data);
+        }
+
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
